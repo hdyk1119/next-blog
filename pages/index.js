@@ -1,7 +1,6 @@
 // pages/index.js
 import Link from "next/link";
 import { client } from "../libs/client";
-
 export default function Home({ blog }) {
   return (
     <div>
