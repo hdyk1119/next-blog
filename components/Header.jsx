@@ -1,9 +1,11 @@
 import Link from "next/link";
 
-function Header(){
+const Header = () => {
   return (
     <header>
-      <h1>Header</h1>
+      <h1>
+        <Link href="/">Header</Link>
+      </h1>
     </header>
   );
 }

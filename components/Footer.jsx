@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Footer(){
+const Footer = () => {
   return (
     <footer>
       <h1>Footer</h1>
