@@ -1,6 +1,7 @@
 // pages/index.js
 import Link from "next/link";
 import { client } from "../libs/client";
+
 export default function Home({ blog }) {
   return (
     <div>
@@ -15,7 +16,7 @@ export default function Home({ blog }) {
       </ul>
     </div>
   );
-}
+};
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
@@ -23,7 +24,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      blog: data.contents,
+      blog: data.contents
     },
   };
 };
