@@ -1,6 +1,7 @@
 // pages/index.js
 import Link from "next/link";
 import { client } from "../libs/client";
+import Layout from '../components/Layout'
 
 export default function Home({ blog }) {
   return (
@@ -28,3 +29,11 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}

@@ -1,20 +1,31 @@
 // pages/blog/[id].js
 import { client } from "../../libs/client";
+import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 import styles from '../../styles/Home.module.scss';
 
 export default function BlogId({ blog }) {
+
+  const pagePath = `https://h3e.vercel.app/blog/${blog.id}`;
+
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.publishedAt}>{blog.publishedAt}</p>
-      <p className="category">{blog.category && `${blog.category.name}`}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.body}`,
-        }}
-        className={styles.post}
+    <>
+      <Seo
+        pageTitle={blog.title}
+        pagePath={pagePath}
       />
-    </main>
+      <main className={styles.main}>
+        <h1 className={styles.title}>{blog.title}</h1>
+        <p className={styles.publishedAt}>{blog.publishedAt}</p>
+        <p className="category">{blog.category && `${blog.category.name}`}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${blog.body}`,
+          }}
+          className={styles.post}
+        />
+      </main>
+    </>
   );
 }
 
@@ -37,3 +48,13 @@ export const getStaticProps = async (context) => {
     },
   };
 };
+
+BlogId.getLayout = function getLayout(page) {
+  return (
+    <>
+      <Layout>
+        {page}
+      </Layout>
+    </>
+  )
+}
