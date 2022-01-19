@@ -113,12 +113,18 @@ $accent: #c5004c;
 }
 
 .share {
-  display: inline-flex;
-  align-items: center;
   text-decoration: none;
   color: #666;
+  display: -webkit-inline-box;
+  border: 1px solid #eee;
 
   span {
     margin-left: .5rem;
   }
+}
+
+.shareWrapper {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
 }

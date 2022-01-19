@@ -36,8 +36,10 @@ export default function BlogId({ blog }) {
           </div>
           <Link href={`https://twitter.com/share?url=${pagePath}&text=${blog.title}`}>
             <a className={styles.share}>
-              <i className="im im-twitter"></i>
-              <span>Share</span>
+              <div className={styles.shareWrapper}>
+                <i className="im im-twitter"></i>
+                <span>Share</span>
+              </div>
             </a>
           </Link>
         </article>
