@@ -114,20 +114,11 @@ $accent: #c5004c;
 
 .share {
   display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  padding: .5rem 1rem;
   color: #666;
-  border: 1px solid #ccc;
-  margin-top: 40px;
-
-  i.im {
-    display: flex;
-    align-items: center;
-  }
 
   span {
-    display: flex;
-    align-items: center;
     margin-left: .5rem;
   }
 }
