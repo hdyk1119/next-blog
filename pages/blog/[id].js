@@ -35,7 +35,9 @@ export default function BlogId({ blog }) {
             </ReactMarkdown>
           </div>
           <Link href={`https://twitter.com/share?url=${pagePath}&text=${blog.title}`}>
-            <a className={styles.share}><div className={styles.shareWrapper}><i className="im im-twitter"></i><span>Share</span></div></a>
+            <a className={styles.share}>
+              <span>Share</span>
+            </a>
           </Link>
         </article>
       </main>

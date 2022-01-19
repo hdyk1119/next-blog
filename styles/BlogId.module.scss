@@ -115,20 +115,24 @@ $accent: #c5004c;
 .share {
   text-decoration: none;
   color: #666;
-  display: -webkit-inline-box;
-  border: 1px solid #eee;
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 40px;
+  background-color: #999;
+  color: #fff;
+  border-radius: 2px;
 
   span {
-    margin-left: .5rem;
+    display: flex;
+    align-items: center;
   }
-}
 
-.shareWrapper {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-
-  i, span {
-    line-height: 24px;
+  span::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-right: .5rem;
+    color: #f90;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M24%204.557c-.883.392-1.832.656-2.828.775%201.017-.609%201.798-1.574%202.165-2.724-.951.564-2.005.974-3.127%201.195-.897-.957-2.178-1.555-3.594-1.555-3.179%200-5.515%202.966-4.797%206.045-4.091-.205-7.719-2.165-10.148-5.144-1.29%202.213-.669%205.108%201.523%206.574-.806-.026-1.566-.247-2.229-.616-.054%202.281%201.581%204.415%203.949%204.89-.693.188-1.452.232-2.224.084.626%201.956%202.444%203.379%204.6%203.419-2.07%201.623-4.678%202.348-7.29%202.04%202.179%201.397%204.768%202.212%207.548%202.212%209.142%200%2014.307-7.721%2013.995-14.646.962-.695%201.797-1.562%202.457-2.549z%22%2F%3E%3C%2Fsvg%3E');
   }
 }
