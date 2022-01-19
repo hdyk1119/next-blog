@@ -1,3 +1,47 @@
-.heading {
-  color: red;
+$breakpoint-up: (
+  'tablet': 'screen and (min-width: 560px)',
+  'pc': 'screen and (min-width: 960px)'
+) !default;
+
+@mixin mq-up($breakpoint: tablet) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+.header {
+  @include mq-up(pc) {
+    width: 180px;
+    position: fixed;
+    height: 100vh;
+    background-color: #fffdfa;
+    border-right: 1px solid #ddd;
+  }
+
+  .id {
+    width: 130px;
+    margin-top: 80px;
+
+    @include mq-up(pc) {
+      width: 140px;
+    }
+  }
+
+  .id a {
+    @include mq-up(pc) {
+      display: block;
+    }
+  }
+
+  .id img {
+
+  }
+
+  .sns a {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
 }

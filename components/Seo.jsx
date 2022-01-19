@@ -9,7 +9,7 @@ const Seo = ({
   pageImgHeight
 }) => {
   const defaultTitle = 'h3e'
-  const defaultDescription = 'demo'
+  const defaultDescription = ''
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
@@ -31,11 +31,10 @@ const Seo = ({
       <meta property="og:image" content={imgUrl} />
       <meta property="og:image:width" content={String(imgWidth)} />
       <meta property="og:image:height" content={String(imgHeight)} />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"
-        rel="stylesheet"
-      />
+      <meta content="summary" name="twitter:card" />
+      <meta content={description} property="twitter:description" />
+      <meta content="@h3e" name="twitter:site" />
+      <meta content={title} property="twitter:title" />
       <link rel="canonical" href={url} />
     </Head>
   )
